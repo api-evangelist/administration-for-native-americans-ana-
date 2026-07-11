@@ -45,6 +45,8 @@ apis:
       - type: DataAPI
         url: https://healthdata.gov/dataset/Administration-for-Native-Americans-ANA-Projects-R/c57a-jjpd/data
 common:
+  - type: DomainSecurity
+    url: security/administration-for-native-americans-ana--domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/administration-for-native-americans
   - type: Website
