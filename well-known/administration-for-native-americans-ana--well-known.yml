@@ -1,0 +1,93 @@
+generated: '2026-08-30'
+method: probed
+source: live HTTPS probes of every apis.yml host and the dataset access host
+provider: Administration for Native Americans (ANA)
+providerId: administration-for-native-americans-ana-
+description: >-
+  Well-known URI probe record for the Administration for Native Americans (ANA).
+  ANA is a program office inside the Administration for Children and Families
+  (ACF), U.S. Department of Health and Human Services; its web presence is served
+  by the ACF Drupal estate (acf.gov / www.acf.hhs.gov) and its two published
+  dataset records live on the HHS-operated healthdata.gov Socrata platform and the
+  data.gov catalog. Every RFC 8615 well-known path was probed on all four hosts and
+  every one returned 404. No WellKnown or SecurityTxt pointer is emitted, because
+  this file records an absence, not a served surface.
+hosts:
+  - host: www.acf.hhs.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: acf.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: healthdata.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: catalog.data.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+notes:
+  - >-
+    The HHS department-level host www.hhs.gov answers 403 Access Denied to every
+    request from a non-browser client, including /.well-known/security.txt, so the
+    HHS-wide vulnerability disclosure policy could not be read from an ANA host.
+    That host is not an ANA property and is recorded here only as context.
+  - >-
+    healthdata.gov and catalog.data.gov return a rendered HTML 404 page for these
+    paths (Socrata and data.gov respectively). Neither is an SPA catch-all
+    returning a false 200.
+maintainers:
+  - FN: Kin Lane
+    X-twitter: apievangelist
+    email: info@apievangelist.com

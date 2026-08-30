@@ -27,7 +27,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/administration-for-native-americans-ana-/refs/heads/main/apis.yml
 name: Administration for Native Americans (ANA)
 created: '2024-11-20'
-modified: '2026-04-19'
+modified: '2026-08-30'
 specificationVersion: '0.23'
 tags:
   - Federal-Government
@@ -65,7 +65,8 @@ apis:
       data.gov and healthdata.gov catalogs, the dataset includes project
       summaries, community impact assessments, and funding outcomes. Published
       under the Open Data Commons ODbL 1.0 license for public access and reuse.
-    humanURL: https://catalog.data.gov/dataset/administration-for-native-americans-ana-projects-report
+    humanURL: https://healthdata.gov/d/c57a-jjpd
+    baseURL: https://healthdata.gov
     tags:
       - Native Americans
       - Grants
@@ -75,10 +76,44 @@ apis:
       - type: Documentation
         url: https://catalog.data.gov/dataset/administration-for-native-americans-ana-projects-report
       - type: DataAPI
-        url: https://healthdata.gov/dataset/Administration-for-Native-Americans-ANA-Projects-R/c57a-jjpd/data
+        url: https://healthdata.gov/api/views/c57a-jjpd.json
+  - aid: administration-for-native-americans-ana-:ana-fy2013-congressional-report
+    name: FY 2013 Congressional Report on the Social and Economic Conditions of Native Americans
+    description: >-
+      Metadata-only catalog record in the HHS enterprise data inventory for the
+      FY 2013 Congressional Report on the Social and Economic Conditions of Native
+      Americans, published by the Administration for Children and Families. Like
+      the ANA Projects Report it is a Socrata href asset, not a queryable dataset:
+      the record links to the full report on the official ACF site. Discovered
+      2026-08-30 in https://healthdata.gov/data.json.
+    humanURL: https://healthdata.gov/d/j3ez-xsxr
+    baseURL: https://healthdata.gov
+    tags:
+      - Native Americans
+      - Open Data
+      - Social Services
+    properties:
+      - type: Documentation
+        url: https://acf.gov/media/14313
+      - type: DataAPI
+        url: https://healthdata.gov/api/views/j3ez-xsxr.json
 common:
   - type: DomainSecurity
     url: security/administration-for-native-americans-ana--domain-security.yml
+  - type: Conformance
+    url: conformance/administration-for-native-americans-ana--conformance.yml
+  - type: Lifecycle
+    url: lifecycle/administration-for-native-americans-ana--lifecycle.yml
+  - type: LLMsTxt
+    url: llms/administration-for-native-americans-ana--llms.txt
+  - type: Plans
+    url: plans/administration-for-native-americans-ana--plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/administration-for-native-americans-ana--rate-limits.yml
+  - type: Blog
+    url: https://acf.gov/ana/news
+  - type: PrivacyPolicy
+    url: https://acf.gov/privacy-policy
   - type: LinkedIn
     url: https://www.linkedin.com/company/administration-for-native-americans
   - type: Website
@@ -86,7 +121,7 @@ common:
   - type: Portal
     url: https://acf.gov/ana
   - type: Resources
-    url: https://www.acf.hhs.gov/ana/research
+    url: https://acf.gov/ana/resource-library
   - type: Contact
     url: https://acf.gov/ana/about
   - type: Features
@@ -152,3 +187,31 @@ maintainers:
   - FN: Kin Lane
     X-twitter: apievangelist
     email: info@apievangelist.com
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    ANA is a federal grant-making program office inside ACF/HHS with no software
+    product and no developer surface; its entire machine-readable footprint is two
+    Socrata metadata-only "href" records on healthdata.gov whose row API answers
+    403 "no row or column access to non-tabular tables", and the only distribution
+    the flagship record advertises (www.acf.hhs.gov/ana/research) is itself a 404.
+  evidence:
+    - url: https://healthdata.gov/resource/c57a-jjpd.json
+      status: 403
+    - url: https://www.acf.hhs.gov/ana/research
+      status: 404
+    - url: https://catalog.data.gov/api/3/action/package_show?id=administration-for-native-americans-ana-projects-report
+      status: 404
+    - url: https://acf.gov/.well-known/api-catalog
+      status: 404
+    - url: https://healthdata.gov/data.json
+      status: 200
+  checked: '2026-08-30'
+x-parent: the-administration-for-children-and-families
+x-relationship: division

@@ -4,10 +4,10 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Administration for Native Americans (ANA)
 providerId: administration-for-native-americans-ana-
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-08-30'
+generated: '2026-08-30'
+method: searched
+source: https://acf.gov/ana ; https://acf.gov/ana/grants ; https://healthdata.gov/d/c57a-jjpd
 tags:
   - Federal Government
   - Indigenous
@@ -16,133 +16,29 @@ tags:
   - Social Services
   - Language Preservation
   - Open Data
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
-plans:
-  - id: administration-for-native-americans-ana--free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Administration for Native Americans (ANA) API surface. Intended
-      for evaluation, prototyping, and low-volume integrations. Real limits and pricing must be reconciled
-      with the provider's published plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: ANA Projects Report Dataset
-  - id: administration-for-native-americans-ana--pro
-    name: Professional
-    type: paid
-    description: Production tier for Administration for Native Americans (ANA). Provides higher quotas,
-      priority support, and access to the broader API portfolio. Pricing placeholder; align with the provider's
-      pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: ANA Projects Report Dataset
-  - id: administration-for-native-americans-ana--enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Administration for Native Americans (ANA). Includes dedicated
-      capacity, contractual SLAs, security review, data residency options, and named technical account
-      management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: ANA Projects Report Dataset
+description: >-
+  Plans and pricing record for the Administration for Native Americans (ANA). ANA
+  is a U.S. federal program office. It publishes no API, sells no API access, and
+  operates no commercial tiering of any kind. Its two dataset records on
+  healthdata.gov are public-domain federal open data under ODbL 1.0, free to
+  everyone, with no account, key, quota or price attached.
+plan_count: 0
+plans: []
+pricing_model: none
+free: true
+notes:
+  - >-
+    ANA administers a discretionary grant program (SEDS, Native Language
+    Preservation and Maintenance, Esther Martinez Immersion, Environmental
+    Regulatory Enhancement) of roughly $45M annually. Those are grants ANA AWARDS
+    to tribal and Native organizations, not plans a developer buys. They are
+    deliberately excluded from this artifact: recording them as pricing tiers would
+    misrepresent a federal funding program as an API commercial model.
+  - >-
+    Supersedes a scaffold written by the 2026-05-04 bulk sweep which invented
+    Free / Professional / Enterprise tiers with placeholder quotas (1,000 and
+    100,000 requests/month) and TBD prices. No such tiers exist and none were ever
+    published by ANA. Replaced 2026-08-30 with the searched zero.
 maintainers:
   - FN: Kin Lane
     X-twitter: apievangelist

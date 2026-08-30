@@ -1,0 +1,96 @@
+generated: '2026-08-30'
+method: searched
+source: >-
+  https://healthdata.gov/data.json (DCAT-US 1.1 catalog, HTTP 200, 34,020,777
+  bytes) and https://healthdata.gov/api/views/c57a-jjpd.json (HTTP 200,
+  application/json)
+provider: Administration for Native Americans (ANA)
+providerId: administration-for-native-americans-ana-
+description: >-
+  Standards conformance record for the Administration for Native Americans (ANA).
+  ANA publishes no API of its own. Its data assets are exposed as DCAT-US 1.1
+  (Project Open Data v1.1) catalog records inside the HHS-operated healthdata.gov
+  enterprise data inventory, and are cross-listed on catalog.data.gov. The only
+  standards ANA can be measured against are therefore the federal open-data
+  metadata standards, not API standards.
+surfaces:
+  openapi: none published
+  graphql: none published
+  asyncapi: none published
+  mcp: none published
+  catalog: https://healthdata.gov/data.json
+standards:
+  - id: dcat-us-1.1
+    name: DCAT-US Schema v1.1 (Project Open Data)
+    conforms: true
+    domain_standard: true
+    evidence: >-
+      https://healthdata.gov/data.json declares
+      "conformsTo": "https://project-open-data.cio.gov/v1.1/schema" and
+      "describedBy": "https://project-open-data.cio.gov/v1.1/schema/catalog.json".
+      ANA's dataset record appears in that catalog as a dcat:Dataset with
+      publisher org:Organization "Administration for Children and Families",
+      identifier 73c33ee9-43a3-407a-8df9-186a43671599, bureauCode 009:70 and
+      programCode 009:095.
+    note: >-
+      This is the domain standard for a U.S. federal data publisher and is the
+      only machine-readable contract in which ANA's assets appear. It is served by
+      HHS on ANA's behalf, not published by ANA itself.
+  - id: odbl-1.0
+    name: Open Data Commons Open Database License 1.0
+    conforms: true
+    evidence: >-
+      The DCAT record for the ANA Projects Report declares
+      "license": "https://opendatacommons.org/licenses/odbl/1.0/".
+  - id: foia-open-data-act
+    name: OPEN Government Data Act / Federal enterprise data inventory
+    conforms: true
+    evidence: >-
+      ANA's assets carry accessLevel "public" and are enumerated in the HHS
+      enterprise data inventory at https://healthdata.gov/data.json and mirrored in
+      the data.gov catalog.
+  - id: soda-2.0
+    name: Socrata Open Data API (SODA) 2.0
+    conforms: false
+    evidence: >-
+      https://healthdata.gov/resource/c57a-jjpd.json returns HTTP 403 with
+      {"error":true,"message":"no row or column access to non-tabular tables"}.
+      The asset is declared assetType/viewType "href" — an external-link record —
+      so no SODA row endpoint exists for it. The same is true of j3ez-xsxr.
+  - id: ckan-action-api
+    name: CKAN Action API v3
+    conforms: false
+    evidence: >-
+      https://catalog.data.gov/api/3/action/package_show?id=administration-for-native-americans-ana-projects-report
+      returns HTTP 404 {"detail":{},"message":"Not Found"}, as do
+      /api/3/action/package_search and /api/3/action/package_list. The data.gov
+      CKAN Action API is not answering for this record.
+  - id: oauth2
+    name: OAuth 2.0
+    conforms: false
+    evidence: >-
+      No securitySchemes are published (no spec exists) and
+      /.well-known/oauth-authorization-server returns 404 on every ANA host.
+  - id: oidc
+    name: OpenID Connect
+    conforms: false
+    evidence: /.well-known/openid-configuration returns 404 on every ANA host.
+  - id: rfc9457
+    name: RFC 9457 Problem Details for HTTP APIs
+    conforms: false
+    evidence: No API surface exists to return problem+json.
+  - id: rfc9116
+    name: RFC 9116 security.txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404 on acf.gov, www.acf.hhs.gov, healthdata.gov and catalog.data.gov.
+compliance:
+  certifications: []
+  note: >-
+    No SOC 2 / ISO 27001 / FedRAMP authorization is published under an ANA-branded
+    surface. ANA inherits the HHS/ACF federal security posture (FISMA), which is
+    not published as a certification artifact on an ANA page. No Compliance
+    pointer is emitted, because there is nothing published to point at.
+maintainers:
+  - FN: Kin Lane
+    X-twitter: apievangelist
+    email: info@apievangelist.com

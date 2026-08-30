@@ -1,0 +1,30 @@
+generated: '2026-08-30'
+method: searched
+source: >-
+  registry.npmjs.org search API, pypi.org/pypi JSON API, and the ANA and ACF web
+  properties (acf.gov/ana, acf.gov/ana/resource-library)
+provider: Administration for Native Americans (ANA)
+providerId: administration-for-native-americans-ana-
+description: >-
+  Client library record for the Administration for Native Americans (ANA). ANA
+  publishes no API, so there is no first-party or third-party SDK to wrap. Public
+  registries were searched and returned nothing attributable to ANA or ACF.
+package_count: 0
+packages: []
+registries_searched:
+  - registry: npm
+    endpoint: https://registry.npmjs.org/-/v1/search
+    status: 200
+    result: no ANA or ACF first-party package
+  - registry: pypi
+    endpoint: https://pypi.org/pypi/{name}/json
+    status: 404
+    result: no ANA or ACF first-party package
+notes:
+  - >-
+    No SDKs pointer is emitted in apis.yml, because there is no SDK. sdk_count is
+    genuinely zero for this provider.
+maintainers:
+  - FN: Kin Lane
+    X-twitter: apievangelist
+    email: info@apievangelist.com

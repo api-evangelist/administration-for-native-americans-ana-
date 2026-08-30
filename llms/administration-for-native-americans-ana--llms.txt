@@ -1,0 +1,82 @@
+# Administration for Native Americans (ANA)
+
+> The Administration for Native Americans (ANA) is a program office within the
+> Administration for Children and Families (ACF), U.S. Department of Health and
+> Human Services. ANA promotes social and economic self-sufficiency and cultural
+> and language preservation for Native Americans, Alaska Natives, Native
+> Hawaiians and Pacific Islander communities, primarily through a discretionary
+> grant program of roughly $45 million per year.
+
+**ANA does not publish an API.** There is no OpenAPI, GraphQL, AsyncAPI, gRPC,
+SOAP or MCP contract, no developer portal, no API key, and no rate limit. An
+agent cannot call ANA. This file exists so an agent stops looking, and knows
+exactly what does and does not exist.
+
+Generated 2026-08-30 by the API Evangelist enrichment pipeline from probed
+sources. Every URL below was fetched and its status recorded.
+
+## What ANA actually publishes
+
+ANA's machine-readable footprint is two catalog records in the HHS enterprise
+data inventory, both of which are metadata-only pointers (Socrata
+`assetType: href`) to human-readable documents. Neither is queryable.
+
+- [ANA Projects Report (c57a-jjpd)](https://healthdata.gov/d/c57a-jjpd): the 2010
+  Congressional Report covering 70 ANA projects that ended in 2010. Issued
+  2012-08-10, metadata last modified 2023-07-26. Licensed ODbL 1.0. Machine
+  -readable record: `https://healthdata.gov/api/views/c57a-jjpd.json` (200,
+  application/json). **Its only declared distribution,
+  `https://www.acf.hhs.gov/ana/research`, returns HTTP 404.**
+- [FY 2013 Congressional Report on the Social and Economic Conditions of Native
+  Americans (j3ez-xsxr)](https://healthdata.gov/d/j3ez-xsxr): metadata-only
+  record linking to https://acf.gov/media/14313 (200).
+- [HHS DCAT-US 1.1 catalog](https://healthdata.gov/data.json): the enterprise
+  data inventory both records live in. Conforms to
+  https://project-open-data.cio.gov/v1.1/schema. 20,472 datasets, ANA's included.
+
+## What is NOT available
+
+- No SODA row API. `https://healthdata.gov/resource/c57a-jjpd.json` returns 403
+  `{"error":true,"message":"no row or column access to non-tabular tables"}`.
+- No CKAN Action API. `https://catalog.data.gov/api/3/action/package_show?id=...`
+  returns 404, as do `package_search` and `package_list`.
+- No `/.well-known/` documents. security.txt, openid-configuration,
+  oauth-authorization-server, api-catalog, ai-plugin.json, agent-card.json and
+  agent.json all return 404 on acf.gov, www.acf.hhs.gov, healthdata.gov and
+  catalog.data.gov.
+- No SDKs, no CLI, no Postman collection, no sandbox, no status page, no
+  changelog, no deprecation policy, no MCP server, no A2A agent card.
+
+## Human pages
+
+- [ANA home](https://acf.gov/ana)
+- [About ANA](https://acf.gov/ana/about)
+- [What we do](https://acf.gov/ana/about/what-we-do)
+- [Grants](https://acf.gov/ana/grants)
+- [Current recipients](https://acf.gov/ana/current-recipients)
+- [Resource library](https://acf.gov/ana/resource-library)
+- [News](https://acf.gov/ana/news)
+- [Team](https://acf.gov/ana/team)
+- [Priorities: language](https://acf.gov/ana/priorities/language)
+- [Priorities: early childhood development](https://acf.gov/ana/priorities/early-childhood-development)
+- [ACF privacy policy](https://acf.gov/privacy-policy)
+- [Dataset landing page on data.gov](https://catalog.data.gov/dataset/administration-for-native-americans-ana-projects-report)
+
+## Grant programs
+
+- Social and Economic Development Strategies (SEDS)
+- Native Language Preservation and Maintenance
+- Esther Martinez Immersion (EMI) — language nests and survival schools
+- Environmental Regulatory Enhancement
+- Training and Technical Assistance
+
+## If you need ANA data programmatically
+
+Read the DCAT record at `https://healthdata.gov/api/views/c57a-jjpd.json` for
+metadata. The underlying reports are PDFs on acf.gov and must be parsed as
+documents. There is no other route.
+
+## Contact
+
+- Data steward for the catalog records: HealthData@hhs.gov
+- ACF data team (j3ez-xsxr record): ohsepr@acf.hhs.gov

@@ -1,0 +1,109 @@
+generated: '2026-08-30'
+method: searched
+source: >-
+  https://healthdata.gov/api/views/c57a-jjpd.json,
+  https://healthdata.gov/api/views/j3ez-xsxr.json,
+  https://healthdata.gov/resource/3w7r-vvhc.json (archive metadata table),
+  https://healthdata.gov/data.json and https://acf.gov/ana
+provider: Administration for Native Americans (ANA)
+providerId: administration-for-native-americans-ana-
+description: >-
+  Lifecycle record for the Administration for Native Americans (ANA) data surface.
+  ANA ships no API, so there is no API versioning scheme, no deprecation policy
+  and no status page. What can be measured is the currency of the two dataset
+  records ANA has in the federal data inventory, and the liveness of the access
+  points those records advertise. Both are stale and one of them is broken.
+versioning:
+  scheme: none
+  note: >-
+    No API version is published. The dataset records are versioned only by their
+    Socrata four-by-four identifier and a metadata modified date.
+status_page:
+  present: false
+  note: >-
+    ANA publishes no status page. healthdata.gov and catalog.data.gov are operated
+    by HHS and GSA respectively and neither exposes a status page under an ANA
+    surface. No StatusPage pointer is emitted.
+deprecation_policy:
+  present: false
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No RFC 8594 Sunset/Deprecation signalling and no published deprecation policy.
+    No Deprecation pointer is emitted.
+sla:
+  present: false
+assets:
+  - id: c57a-jjpd
+    title: Administration for Native Americans (ANA) Projects Report
+    landing: https://healthdata.gov/d/c57a-jjpd
+    asset_type: href
+    issued: '2012-08-10'
+    data_vintage: '2010'
+    metadata_modified: '2023-07-26'
+    publisher: Administration for Children and Families
+    license: https://opendatacommons.org/licenses/odbl/1.0/
+    contact: mailto:HealthData@hhs.gov
+    machine_readable_metadata: https://healthdata.gov/api/views/c57a-jjpd.json
+    access_points:
+      - url: https://www.acf.hhs.gov/ana/research
+        declared_as: dcat:Distribution downloadURL, mediaType text/html
+        status: 404
+        note: >-
+          BROKEN. The only distribution the DCAT record advertises is a dead link.
+          Probed 2026-08-30: https://www.acf.hhs.gov/ana/research redirects to
+          https://acf.gov/ana/research and returns HTTP 404. The same dead URL is
+          repeated in the record's metadata.additionalAccessPoints block. ANA's
+          current site has no /ana/research path; the equivalent live page is
+          https://acf.gov/ana/resource-library.
+      - url: http://transition.acf.hhs.gov/sites/default/files/ana/2010_impact_and_effectiveness.pdf
+        declared_as: 'custom_fields "Additional Info" -> Technical Documentation'
+        status: '<no response>'
+        note: >-
+          Host transition.acf.hhs.gov did not resolve on probe. This is the
+          underlying 2010 report; it is a PDF, not machine-readable data.
+    row_api:
+      available: false
+      probe: https://healthdata.gov/resource/c57a-jjpd.json
+      status: 403
+      body: '{"error":true,"message":"no row or column access to non-tabular tables"}'
+  - id: j3ez-xsxr
+    title: FY 2013 Congressional Report on the Social and Economic Conditions of Native Americans
+    landing: https://healthdata.gov/d/j3ez-xsxr
+    asset_type: href
+    issued: '2025-09-03'
+    metadata_modified: '2025-09-06'
+    publisher: Administration for Children and Families
+    contact: mailto:ohsepr@acf.hhs.gov
+    machine_readable_metadata: https://healthdata.gov/api/views/j3ez-xsxr.json
+    access_points:
+      - url: https://acf.gov/media/14313
+        declared_as: dcat:Distribution downloadURL, mediaType text/html
+        status: 200
+    note: >-
+      Metadata-only record. The DCAT description states plainly
+      "Metadata-only record linking to the original dataset."
+change_log:
+  present: false
+  note: >-
+    No product changelog. The closest thing is the Socrata archive-repository table
+    https://healthdata.gov/resource/3w7r-vvhc.json (HTTP 200), which records
+    metadata edits to c57a-jjpd; the most recent entry is 2023-07-25. It logs
+    metadata changes to the catalog record, not changes to any ANA data or API, so
+    no ChangeLog pointer is emitted.
+findings:
+  - >-
+    ANA's flagship catalog record advertises exactly one distribution and that
+    distribution 404s. This is the single most actionable defect on ANA's data
+    surface and it is the provider's to fix: update the DCAT distribution
+    downloadURL on healthdata.gov asset c57a-jjpd from /ana/research to a live
+    ANA page.
+  - >-
+    Both ANA assets are declared assetType "href", so neither is queryable. The
+    underlying content is a PDF report. There is no tabular ANA data in the federal
+    inventory despite ANA administering a roughly $45M annual discretionary grant
+    program with published project outcomes.
+maintainers:
+  - FN: Kin Lane
+    X-twitter: apievangelist
+    email: info@apievangelist.com
