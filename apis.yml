@@ -31,7 +31,7 @@ created: '2024-11-20'
 modified: '2026-08-30'
 specificationVersion: '0.23'
 tags:
-  - Federal-Government
+  - Federal Government
   - Indigenous
   - Native Americans
   - Grants
@@ -46,6 +46,7 @@ tags_raw:
   - Social Services
   - Language Preservation
   - Open Data
+  - Federal-Government
 description: >-
   The Administration for Native Americans (ANA) is an agency within the
   Administration for Children and Families (ACF), U.S. Department of Health
