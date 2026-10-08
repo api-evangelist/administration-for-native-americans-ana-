@@ -100,6 +100,8 @@ apis:
       - type: DataAPI
         url: https://healthdata.gov/api/views/j3ez-xsxr.json
 common:
+  - type: FinOps
+    url: finops/administration-for-native-americans-ana--finops.yml
   - type: DomainSecurity
     url: security/administration-for-native-americans-ana--domain-security.yml
   - type: Conformance
