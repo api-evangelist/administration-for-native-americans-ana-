@@ -1,4 +1,4 @@
-# Administration for Native Americans (ANA) (administration-for-native-americans-ana-)
+# Administration for Native Americans (ANA)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,65 +66,102 @@
 
 The Administration for Native Americans (ANA) is an agency within the Administration for Children and Families (ACF), U.S. Department of Health and Human Services. ANA promotes self-sufficiency and cultural preservation for Native Americans, Alaska Natives, Native Hawaiians, and other Pacific Islander communities by providing social and economic development opportunities through financial assistance, training, and technical assistance. ANA administers a $45 million discretionary grant program in three primary areas: Social and Economic Development Strategies (SEDS), Native Language Preservation and Maintenance, and Environmental Regulatory Enhancement. ANA data on funded projects is publicly available through data.gov and healthdata.gov.
 
-**URL:** [https://www.acf.hhs.gov/ana](https://www.acf.hhs.gov/ana)
+**Areas:** Federal Government · Indigenous · Native Americans · Grants · Social Services · Language Preservation · Open Data
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Administration for Native Americans (ANA) on APIs.io
 
-## Tags:
+Everything profiled for Administration for Native Americans (ANA) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/administration-for-native-americans-ana-/](https://apis.io/providers/administration-for-native-americans-ana-/)** — or go straight to one of the APIs or properties below.
 
- - Federal Government, Indigenous, Native Americans, Grants, Social Services, Language Preservation, Open Data
+### APIs (2)
 
-## Timestamps
+- [ANA Projects Report Dataset](https://apis.io/apis/administration-for-native-americans-ana-/ana-projects-report/) — The ANA Projects Report dataset provides results and impact analysis for ANA-funded projects in Native American communities. Available through the data.gov…
+- [FY 2013 Congressional Report on the Social and Economic Conditions of Native Americans](https://apis.io/apis/administration-for-native-americans-ana-/ana-fy2013-congressional-report/) — Metadata-only catalog record in the HHS enterprise data inventory for the FY 2013 Congressional Report on the Social and Economic Conditions of Native…
 
-- **Created:** 2024-11-20
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### ANA Projects Report Dataset
-The ANA Projects Report dataset provides results and impact analysis for ANA-funded projects in Native American communities. Available through the data.gov and healthdata.gov catalogs, the dataset includes project summaries, community impact assessments, and funding outcomes. Published under the Open Data Commons ODbL 1.0 license for public access and reuse.
+#### Security (1)
 
-**Human URL:** [https://catalog.data.gov/dataset/administration-for-native-americans-ana-projects-report](https://catalog.data.gov/dataset/administration-for-native-americans-ana-projects-report)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags:
+- [Administration For Native Americans Ana  Domain Security](https://apis.io/security/administration-for-native-americans-ana-/administration-for-native-americans-ana--domain-security/)
 
- - Native Americans, Grants, Open Data, Community Development
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://catalog.data.gov/dataset/administration-for-native-americans-ana-projects-report)
-- [DataAPI](https://healthdata.gov/dataset/Administration-for-Native-Americans-ANA-Projects-R/c57a-jjpd/data)
+- [Administration For Native Americans Ana  Plans Pricing](https://apis.io/plans/administration-for-native-americans-ana-/administration-for-native-americans-ana--plans-pricing/)
 
-## Common Properties
+#### Rate limits (1)
+
+Published request limits.
+
+- [Administration For Native Americans Ana  Rate Limits](https://apis.io/rate-limits/administration-for-native-americans-ana-/administration-for-native-americans-ana--rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Administration For Native Americans Ana  Finops](https://apis.io/finops/administration-for-native-americans-ana-/administration-for-native-americans-ana--finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.acf.hhs.gov/ana)
-- [Portal](https://acf.gov/ana)
-- [Resources](https://www.acf.hhs.gov/ana/research)
-- [Contact](https://acf.gov/ana/about)
+- [Blog](https://acf.gov/ana/news)
+- [Privacy policy](https://acf.gov/privacy-policy)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Social And Economic Development Strategies (SEDS) Grants | Competitive financial assistance grants supporting locally determined projects designed to reduce community problems and achieve social and economic self-sufficiency goals in Native American communities. |
-| Native Language Preservation And Maintenance Grants | Funding for projects that assess, plan, restore, and implement native language curricula to support community language preservation goals, including language nest and survival school programs. |
-| Esther Martinez Immersion (EMI) Grants | Grants for immersive, site-based Native American language education programs for children, including language nest programs for young children and language survival schools. |
-| Environmental Regulatory Enhancement Grants | Grants providing tribes with resources to develop legal, technical, and organizational capacities for protecting their natural environments and exercising environmental regulatory authority. |
-| Training And Technical Assistance | Capacity building support and technical assistance to Native American communities and tribal organizations to strengthen grant management and program implementation. |
-| Open Data Publication | ANA publishes grant outcome data and project reports as open data through data.gov and healthdata.gov under open licenses for public access and research use. |
+**Kin Score 12.9** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 0.0 |
 
-| Name | Description |
-|------|-------------|
-| Tribal Grant Research And Planning | Tribal organizations and Native communities can review ANA project report data to learn from successful models for social and economic development initiatives when applying for ANA grants. |
-| Native Language Revitalization Research | Researchers and language advocates can access ANA program data on language preservation projects to analyze the effectiveness of immersion and curriculum-based approaches to language revitalization. |
-| Policy Impact Analysis | Federal and state policymakers and advocacy organizations can use ANA project outcome data to evaluate the effectiveness of grant programs in improving conditions in Native American communities. |
-| Community Economic Development Planning | Tribal governments and community organizations can reference ANA SEDS grant data to identify successful models for economic self-sufficiency initiatives in Native communities. |
-| Environmental Justice Research | Environmental researchers and tribal environmental programs can use ANA data to understand the scope and effectiveness of tribal environmental regulatory capacity building efforts. |
+**Agent readiness 2.5** — human-only
 
-## Maintainers
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-**FN:** Kin Lane
+**Regulatory alignment 10.8** — Government & Public Sector
 
-**Email:** info@apievangelist.com
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/administration-for-native-americans-ana-/](https://apis.io/providers/administration-for-native-americans-ana-/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Administration for Native Americans (ANA): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/administration-for-native-americans-ana-/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
